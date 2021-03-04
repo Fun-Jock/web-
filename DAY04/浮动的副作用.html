@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            /* height: 400px; */
+            background-color:blue;
+        }
+        .box div {
+            width: 100px;
+            height: 100px;
+            float:left;
+            background-color:green;
+        }
+        /* 清除浮动的几种方式 */
+        /* 1、空标签清除浮动，堵门空标签的必须是块元素 */
+        /* p {
+            clear: left;
+        } */
+        /* 2、给父容器增加高度 */
+        /* 3\给父容器设置overflow为hidden */
+        /* .box {
+            overflow:hidden;
+        } */
+        /* 4、after伪类的形式 */
+        .box::after {
+            clear:both;
+            content: "";
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            display: block;
+        }
+        /* p::after{
+            content: "--aaa";
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <p></p>
+
+        <!-- <p>xxxxx</p> -->
+    </div>
+</body>
+</html>
