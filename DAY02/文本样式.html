@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text {
+            /* 颜色的表示方式：
+                    1、直接英文单词
+                    2、rgb:红绿蓝，每个数字取值范围是0-255
+                    3、rgba:带有透明度的颜色，a取值：0-1,0是完全透明，
+                        利用透明度可以使某个元素消失，位置还在
+                    4、HEX:十六进制颜色,#fff:白色
+            */
+            /* color: rgba(10,10,10, 0.4); */
+            /* color: #fff; */
+            color: rgb(16, 247, 54);
+            text-align: left;/*文本的对齐方式：left、right、end*/
+            line-height: 100px;/*应用场景：垂直方向居中*/
+            text-decoration-line:overline;
+            text-decoration-style: double;
+            text-decoration-color: blue;
+            text-indent: 6em;/*缩进，em表示当前文字的宽度*/
+            letter-spacing: 10px;/*文字之间的空隙*/
+
+        }
+        
+        a {
+            text-decoration: none;/*去掉a标签的下划线*/
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <p id="text">今天晚上要上课</p>
+    <p>今天天气挺好的</p>
+    <a href="">sss</a>
+
+</body>
+</html>

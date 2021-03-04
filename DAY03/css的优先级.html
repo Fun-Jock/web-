@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 相同的样式，但是声明的时候的选择性不同，造成的优先级问题 */
+        /* 优先级的权重 0，0，0，0
+
+        继承和*权重     0，0，0，0
+        标签选择器权重  0，0，0，1
+        类选择器权重    0，0，1，0
+        id选择器的权重  0，1，0，0
+        内联样式权重    1，0，0，0
+        ！important    无穷大
+        权重的比较：
+            1、权重比较从左往右比较
+            2、权重不存在继位
+            3、权重大的优先级高
+            4、复杂选择器的权重是所有选择器的加和
+         */
+        div {
+            color:red;
+        }
+        .demo {
+            color:green;
+        }
+        #div1{
+            color: blue;
+        }
+
+        .ul li {
+            color: red;
+        }
+        .li {
+            color: rgb(168, 238, 56)
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="div1" class="demo">第一个div</div>
+    <div>第二个div</div>
+
+    <ul class="ul">
+        <li class="li" style="color: rgba(22, 233, 233, 0.678);">权重的比较</li>
+    </ul>
+
+</body>
+</html>

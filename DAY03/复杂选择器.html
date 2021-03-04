@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 通配符选择器 */
+        * {
+            font-size: large;
+        }
+        /* 后代选择器 */
+        #div1 p {
+            color: red;
+        }
+        /* 子选择器 */
+        #div1>p {
+            color: blue
+        }
+        /* 相邻兄弟选择器 */
+        #div1+p {
+            color: yellow;
+            /* 兄弟是往下找 */
+        }
+        /* 组选择器 */
+        h1,p {
+            color: aqua;
+        }
+        /* 伪类选择器
+            元素：状态{}
+         */
+        #div1:hover {
+            background-color: blueviolet;
+        }
+        input:focus {
+            background-color:chartreuse;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>xxxxxx</p>
+
+    <div id="div1">
+        <p>儿子辈</p>
+        <div>
+            <p>孙子辈</p>
+        </div>
+    </div>
+    <h1>bbbbb</h1>
+
+    <p>aaaaaa</p>
+
+    <input type="text">
+
+    <!-- 
+        1、通配符选择器
+            语法：* {}
+        2、后代选择器
+            语法：元素 元素 {}
+            后代：包含子子孙孙辈
+        3、子选择器
+            语法：元素>元素 {}
+        4、相邻兄弟选择器
+            语法：元素+元素 {}
+            注意：往下找的第一个兄弟
+        5、组选择器
+        语法：元素，元素 {}
+        6、伪类选择器
+            语法：元素：状态{}
+            状态：a标签的四个状态和focus状态
+     -->
+
+</body>
+</html>
