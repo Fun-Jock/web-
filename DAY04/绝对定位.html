@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 绝对定位
+            定位规则：找爸爸（带有相对定位的父元素）
+
+         */
+         * {
+             margin: 30px;
+         }
+        .box {
+            width: 400px;
+            height: 400px;
+            position:absolute;
+            background-color:rgb(156, 136, 136);
+        }
+        .box div {
+            width: 100px;
+            height: 100px;
+        }
+        .div1{
+            position:absolute;
+            /* top right bottom left */
+            right: 0px;
+            top:0px;
+            background-color:rgb(130, 130, 230);
+        }
+        .div2{
+            background-color: rgb(125, 202, 125);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        
+    </div>
+</body>
+</html>
