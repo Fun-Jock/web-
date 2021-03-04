@@ -1,7 +1,5 @@
 HTTP
-
 CSS
-
 JvaScript
 BootStrap
 Xml
