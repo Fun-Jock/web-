@@ -19,22 +19,22 @@
         }
         /* 清除浮动的几种方式 */
         /* 1、空标签清除浮动，堵门空标签的必须是块元素 */
-        /* p {
+        p {
             clear: left;
-        } */
+        }
         /* 2、给父容器增加高度 */
         /* 3\给父容器设置overflow为hidden */
         /* .box {
             overflow:hidden;
         } */
         /* 4、after伪类的形式 */
-        .box::after {
+        /* .box::after {
             clear:both;
             content: "";
             width: 0;
             height: 0;
             visibility: hidden;
-            display: block;
+            display: block; */
         }
         /* p::after{
             content: "--aaa";
