@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            数组的定义：
+                1、new Array();
+                2、[]
+
+                注意：数组尽量存储同一类型的数据
+        */
+        let array1 = new Array(1,2,3);
+        console.log(array1);
+        // alert(array1);//不推荐
+
+        let array2 = [1,2,4,"刻在我心里的名字"];
+        console.log(array2);
+
+        /* 
+            数组的取用、设置、长度
+                取用：通过下标取用，下标从0开始
+                设置：array3
+
+        */
+        let array3 = [1,5,9];
+        console.log(array3[1]); //取用：通过下标取用，下标从0开始
+        array3[1] = 15; //设置
+        console.log(array3[1]); //取用
+        console.log(array3.length); //长度
+
+        /* 
+        数组的遍历
+            遍历：for,for-in,for-of,map
+        */
+        let array4 = ["薛之谦","周杰伦","李荣浩","周星驰"];
+        for (let index in array4){
+            console.log(array4[index]); 
+        }
+
+        for (let item of array4){
+            console.log(item);
+        }
+
+        // array4.map(匿名函数)
+        array4.map(function(item,index){
+            console.log(item);//内容
+            console.log(index);//下标
+        })
+
+        // (参数)=>{代码块}
+        array4.map((item,index)=>{
+            console.log(item);//内容
+            console.log(index);//下标
+        });
+        /* 
+            数组的常用方法：
+                concat()：数组拼接,连接两个或更多的数组，并返回结果。
+                join()	把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+                pop()	删除并返回数组的最后一个元素
+                push()	向数组的末尾添加一个或更多元素，并返回新的长度。
+                reverse()	颠倒数组中元素的顺序。
+                shift()	删除并返回数组的第一个元素
+                slice()	从某个已有的数组返回选定的元素
+                sort()	对数组的元素进行排序
+                splice()	删除元素，并向数组添加新元素。
+                toSource()	返回该对象的源代码。
+                toString()	把数组转换为字符串，并返回结果。
+                toLocaleString()	把数组转换为本地数组，并返回结果。
+                unshift()	向数组的开头添加一个或更多元素，并返回新的长度。
+                valueOf()	返回数组对象的原始值
+        */
+       let array5 = [1,2];
+       let array6 = [4,5];
+       let arrayNew = array5.concat(array6);
+       console.log(arrayNew);
+
+       arrayNew.push(9);
+       console.log(arrayNew);
+       arrayNew.pop();
+       console.log(arrayNew);
+
+    </script>
+</body>
+</html>
