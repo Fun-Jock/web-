@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            创建正则表达式
+                直接量的形式
+                通过对象创建
+
+         */
+
+         let reg1 = /xxx/;
+         let reg2 = new RegExp;
+
+        /* 
+            正则表达式的验证：test
+
+        */
+       let isRight = reg1.test("xxx");
+        console.log(`验证正则表达式是否正确：${isRight}`);
+        let isRight1 = reg1.test("xx");
+        console.log(`验证正则表达式是否正确：${isRight1}`);
+
+        /* 
+            验证方括号
+                验证的字符有abc中的任意一个即为正确
+                ^取反：[^]只要包含非括号中的字符即为正确
+                ^:开头^[]
+                $:结尾
+        */
+
+        let reg3 = /[abc]/; 
+        let result1 = reg3.test("d");
+        console.log(`字符串是否是abc中的一个：${result1}`);
+
+        /* 
+            元字符
+            A-Z：大写字母A到Z
+            a-z：小写字母a到z
+            0-9：数字0到9
+            \d	查找数字
+            \D	查找非数字字符。
+            \w	查找单词字符,指A-z、0-9
+            \W	查找非单词字符
+            .	查找单个字符，除了换行和行结束符
+        */
+        let reg4 = /[.]/;
+        let result2 = reg4.test("a");
+        console.log(result2);
+
+        /* 
+            量词
+                +：1到多个
+                *：0到多个
+        */
+        let reg5 = /[\d]+/; //匹配1到多个数字
+        let reg6 = /[\d]*/; //匹配0到多个数字
+        let reg7 = /^abc[\d]?/;  //匹配0或1个数字
+        let reg8 = /[\d]{10}/; //匹配10个数字的字符串
+        let reg9 = /[\d]{2,10}/; //匹配2-10个数字的字符串
+        let reg10 = /[\d]{2,}/; //最少两个数字
+
+
+        result3 = reg7.test("abc123");
+        console.log(result3);
+
+        let regQQ = /[\d]{5,11}@qq.com$/;
+
+        result4 = regQQ.test("2878928081@qq.com");
+        console.log(`QQ验证：${result4}`);
+
+    </script>
+</body>
+</html>
