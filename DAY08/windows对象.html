@@ -8,6 +8,24 @@
 </head>
 <body>
     
-    
+    <script>
+        /* 
+            1、dom对象等皆是windows对象的属性或者方法
+            2、在使用的过程中，window是可以省略的
+        */
+        
+        // alert("这是一个弹框");
+
+        // 确认框确认的结果是true，取消确认的结果是false
+        /* let result = confirm("你确认要删除这条数据吗");
+        console.log(`确认框的结果是${result}`) */
+        
+        /* 
+            输入框的结果是输入的内容，取消结果是null
+        */
+        let result1 = prompt("请输入答案：", "这题选A");
+        console.log(`输入框的结果是${result1}`);
+
+    </script>
 </body>
 </html>
