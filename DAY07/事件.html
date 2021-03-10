@@ -55,16 +55,20 @@
             console.log("点击事件被重新定义了");
         }
 
-        // btn.addEventListener("事件的类型",处理方法,事件传递方式);
-        //事件传递方式：默认false->事件冒泡，true->事件捕获
+        /* btn.addEventListener("事件的类型",处理方法,事件传递方式);
+        第一个参数：事件类型
+        第二个参数：事件处理方法
+        第三个参数：事件传递方式：默认false->事件冒泡，true->事件捕获 */
         btn.addEventListener("click",function(){
             console.log("addEventListener形式的事件添加")
         })
 
-        /* 
-            组织默认事件：
-                return flase
-                方法
+        /* 事件参数：
+                1、组织默认事件：
+                        1、return flase
+                        2、preventDefault()
+                2、阻止事件冒泡：
+                        stopPropagation
         */
         let a = document.querySelector("a");
         a.onclick = function(){
